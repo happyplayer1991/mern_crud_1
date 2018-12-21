@@ -8,6 +8,7 @@ let Business = require('../models/business.model');
 
 // Defined store route
 businessRoutes.route('/add').post(function (req, res) {
+  console.log(req);
   let business = new Business(req.body);
   business.save()
     .then(business => {
